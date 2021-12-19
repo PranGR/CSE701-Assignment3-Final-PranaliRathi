@@ -86,7 +86,10 @@ Output: `Error! Invalid coefficient value found in coefficient set 1`
 
 ## References Used
 
-[1]<https://barrgroup.com/embedded-systems/how-to/digital-filters-fir-iir>
-[2]<http://soundfile.sapp.org/doc/WaveFormat/>
-[3]<https://www.arc.id.au/FilterDesign.html>
-[4]<https://www2.cs.uic.edu/~i101/SoundFiles/>
+[1]https://barrgroup.com/embedded-systems/how-to/digital-filters-fir-iir
+
+[2]http://soundfile.sapp.org/doc/WaveFormat/
+
+[3]https://www.arc.id.au/FilterDesign.html
+
+[4]https://www2.cs.uic.edu/~i101/SoundFiles/
