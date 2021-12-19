@@ -26,7 +26,7 @@ For custom filters, the user must specify sets of coefficients in a text file. E
 
 Once the audio has been filtered as desired using the above options, the processed audio is then stored into the specified output file.
 
-## Running the Program
+## Compiling and Running the Program
 
 The overall program consists of the files `audioFilter.cpp`, `argumentValidator.cpp`, `argumentValidator.hpp`, `coeffFileParser.cpp`, `coeffFileParser.hpp`, `defaultFilterCoeffs.hpp`, `firFilter.cpp`, `firFilter.hpp`, `wavFile.cpp`, `wavFile.hpp`, `wavHeader.cpp` and `wavHeader.hpp`. The user will need to compile all the `.cpp` files and then run the resulting executable. The following command will allow the user to compile the project with g++:
 
