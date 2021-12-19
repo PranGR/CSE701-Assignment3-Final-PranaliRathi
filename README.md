@@ -11,7 +11,7 @@ WAVE files (.wav) are a type of uncompressed audio file. They are made of the he
 
 In this program, the header information and the audio data are separated into their own data structures. This makes processing of the wave file easier, as its only the audio data that must actually be modified. When creating the new output wave file, the header information of the original input wave file is copied over as is and the audio data is replaced by the filtered output. To generate the filtered output, the program applies a FIR filter to the audio data.
 
-FIR filters work by shifting input samples through a filter buffer, multiplying each sample by the filter coefficients and accumulating those values, per sample. These accumulated samples are the final output values of the filter. For a detailed explanation of the mechanism behind FIR filter, see reference 1. In the case of this program, there is a limited number of samples that can be filtered at one time in order to reduce memory usage. Thus the total audio input data must be batched into appropriate chunks and are processed separately and then combined into a final output, which becomes the output audio data that is written to the output file.
+The FIR filters work by shifting input samples through a filter buffer, multiplying each sample by the filter coefficients and accumulating those values, per sample. These accumulated samples are the final output values of the filter. For a detailed explanation of the mechanism behind the FIR filter, see reference 1. In the case of this program, there is a limited number of samples that can be filtered at one time in order to reduce memory usage. Thus the total audio input data must be batched into appropriate chunks and are processed separately and then combined into a final output, which becomes the output audio data that is written to the output file.
 
 The ability to filter out specific frequencies with a FIR filter is heavily dependant on the filter coefficients used for processing. As previously stated, this program offers the user the choice to use default filters or specify custom filters. The coefficients used for the default filter were generated using the online coefficient generator in reference 3. These default filter options are as follows:
 
@@ -51,6 +51,7 @@ Assume `wrongCoeffsFile.txt` has invalid characters in it.
 Assume the executable to run is `AudioFilter`.
 
 **Correct Input**
+
 Command: `AudioFilter TestStarWars3.wav output.wav y 1 lp`
 The result will be a newly generated audio wave file named `output.wav` which has the audio data from the `TestStarWars3.wav` file filtered through the default low pass filter
 
@@ -58,14 +59,17 @@ Command: `AudioFilter TestStarWars3.wav output.wav n 2 coeffsFile.txt`
 The result will be a newly generated audio wave file named `output.wav` which has the audio data from the `TestStarWars3.wav` file filtered through `2` custom filters whose coefficients are specified in the file `coeffsFile.txt`.
 
 **Incorrect Number of Arguments**
+
 Command: `AudioFilter TestStarWars3.wav output.wav y 2 lp`
 Output: `Error! The number of arguments provided does not correspond properly with the filter_count supplied`
 
 **Incorrect filter_count Value**
+
 Command: `AudioFilter TestStarWars3.wav output.wav n 4 coeffsFile.txt`
 Output: `Error! The number of set of coefficients parsed (2) does not correspond with the filter_count (4) supplied`
 
 **Invalid Coefficient Data**
+
 Command: `AudioFilter TestStarWars3.wav output.wav n 1 wrongCoeffsFile.txt`
 Output: `Error! Invalid coefficient value found in coefficient set 1`
 
