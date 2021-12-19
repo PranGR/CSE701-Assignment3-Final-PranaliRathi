@@ -1,7 +1,7 @@
 # Simple FIR Filter
 
 This Simple FIR Filter is a simple audio processing program that allows the user to filter specified frequencies from a 16-bit input audio wave file.
-The FIR filter requires a set of filter coefficients that are configurable, depending on the frequencies to be filtered. This program comes equipped with 4 different sets of filter coefficients that the user can select from, along with the ability to specify custom filters by providing a coefficients file. The user can also run the input wav file through multiple iterations of processing for further customization of the frequency filtering.
+The FIR filter requires a set of filter coefficients that are configurable, depending on the frequencies to be filtered. This program comes equipped with 4 different sets of filter coefficients that the user can select from, along with the ability to specify custom filters by providing a coefficients file. The user can also specify multiple filters so that the input wav file is run through multiple iterations of processing for further customization of the frequency filtering.
 
 ## Program Background and Structure
 
