@@ -5,7 +5,7 @@ The FIR filter requires a set of filter coefficients that are configurable, depe
 
 ## Program Background and Structure
 
-WAVE files (.wav) are a type of uncompressed audio file. They are made of the a header portion and actual audio data. The following image depicts the structure of wav files.
+WAVE files (.wav) are a type of uncompressed audio file. They are made of the header portion and actual audio data. The following image depicts the structure of wav files.
 
 ![WAVE File Format](http://soundfile.sapp.org/doc/WaveFormat/wav-sound-format.gif)
 
