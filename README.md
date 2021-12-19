@@ -47,31 +47,42 @@ It is important to once again note that the input wav file must use 16-bit audio
 ## Example Inputs and Outputs
 
 Assume `coeffsFile.txt` has 2 valid sets of coefficients.
+
 Assume `wrongCoeffsFile.txt` has invalid characters in it.
+
 Assume the executable to run is `AudioFilter`.
 
 **Correct Input**
 
 Command: `AudioFilter TestStarWars3.wav output.wav y 1 lp`
+
 The result will be a newly generated audio wave file named `output.wav` which has the audio data from the `TestStarWars3.wav` file filtered through the default low pass filter
 
+
 Command: `AudioFilter TestStarWars3.wav output.wav n 2 coeffsFile.txt`
+
 The result will be a newly generated audio wave file named `output.wav` which has the audio data from the `TestStarWars3.wav` file filtered through `2` custom filters whose coefficients are specified in the file `coeffsFile.txt`.
 
 **Incorrect Number of Arguments**
 
 Command: `AudioFilter TestStarWars3.wav output.wav y 2 lp`
+
 Output: `Error! The number of arguments provided does not correspond properly with the filter_count supplied`
+
 
 **Incorrect filter_count Value**
 
 Command: `AudioFilter TestStarWars3.wav output.wav n 4 coeffsFile.txt`
+
 Output: `Error! The number of set of coefficients parsed (2) does not correspond with the filter_count (4) supplied`
+
 
 **Invalid Coefficient Data**
 
 Command: `AudioFilter TestStarWars3.wav output.wav n 1 wrongCoeffsFile.txt`
+
 Output: `Error! Invalid coefficient value found in coefficient set 1`
+
 
 ## References Used
 
